@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="679.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="353.0" fitWidth="353.0" layoutX="321.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/employees.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="firstName" layoutX="14.0" layoutY="33.0" />
+      <Label layoutX="14.0" layoutY="16.0" text="First Name" />
+      <Label layoutX="172.0" layoutY="16.0" text="Last Name" />
+      <TextField fx:id="lastName" layoutX="172.0" layoutY="33.0" />
+      <Label layoutX="14.0" layoutY="64.0" text="Email" />
+      <TextField fx:id="email" layoutX="14.0" layoutY="81.0" />
+      <Label layoutX="172.0" layoutY="64.0" text="Phone Number" />
+      <TextField fx:id="phoneNumber" layoutX="172.0" layoutY="81.0" />
+      <Label layoutX="174.0" layoutY="113.0" text="Restaurant" />
+      <ComboBox fx:id="restaurantId" layoutX="173.0" layoutY="130.0" prefHeight="25.0" prefWidth="81.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="1" />
+                  <String fx:value="2" />
+                  <String fx:value="3" />
+                  <String fx:value="4" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Label layoutX="265.0" layoutY="113.0" text="Position" />
+      <ComboBox fx:id="positionId" layoutX="265.0" layoutY="130.0" prefHeight="25.0" prefWidth="56.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="1" />
+                  <String fx:value="2" />
+                  <String fx:value="3" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Label layoutX="14.0" layoutY="163.0" text="City" />
+      <ComboBox fx:id="city" layoutX="14.0" layoutY="180.0" prefHeight="25.0" prefWidth="149.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Astana" />
+                  <String fx:value="Almaty" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Label layoutX="172.0" layoutY="166.0" text="District" />
+      <TextField fx:id="district" layoutX="172.0" layoutY="180.0" />
+      <Label layoutX="15.0" layoutY="213.0" text="Street" />
+      <TextField fx:id="street" layoutX="14.0" layoutY="230.0" />
+      <Label layoutX="172.0" layoutY="213.0" text="Bd." />
+      <TextField fx:id="building" layoutX="172.0" layoutY="230.0" prefHeight="25.0" prefWidth="29.0" />
+      <Label layoutX="213.0" layoutY="213.0" text="Ent." />
+      <TextField fx:id="gate" layoutX="212.0" layoutY="230.0" prefHeight="25.0" prefWidth="29.0" />
+      <Label layoutX="253.0" layoutY="213.0" text="Floor" />
+      <TextField fx:id="floorStory" layoutX="253.0" layoutY="230.0" prefHeight="25.0" prefWidth="29.0" />
+      <Label layoutX="295.0" layoutY="213.0" text="Apt." />
+      <TextField fx:id="door" layoutX="293.0" layoutY="230.0" prefHeight="25.0" prefWidth="29.0" />
+      <Button layoutX="329.0" layoutY="33.0" mnemonicParsing="false" onAction="#hire" text="Hire" />
+      <Button layoutX="378.0" layoutY="33.0" mnemonicParsing="false" onAction="#raise" text="Raise" />
+      <Button layoutX="436.0" layoutY="33.0" mnemonicParsing="false" onAction="#fire" text="Fire" />
+      <TableView fx:id="table" layoutY="265.0" prefHeight="284.0" prefWidth="679.0">
+        <columns>
+          <TableColumn fx:id="col_employeeId" prefWidth="44.0" text="empId" />
+          <TableColumn fx:id="col_restaurantId" prefWidth="46.0" text="restId" />
+            <TableColumn fx:id="col_firstName" prefWidth="74.0" text="firstName" />
+            <TableColumn fx:id="col_lastName" prefWidth="91.0" text="lastName" />
+            <TableColumn fx:id="col_email" prefWidth="173.0" text="email" />
+            <TableColumn fx:id="col_phoneNumber" prefWidth="87.0" text="phone" />
+            <TableColumn fx:id="col_hireDate" prefWidth="71.0" text="hireDate" />
+            <TableColumn fx:id="col_positionId" prefWidth="40.0" text="posId" />
+            <TableColumn fx:id="col_addressId" prefWidth="38.0" text="addId" />
+        </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="113.0" text="Id" />
+      <TextField fx:id="employeeId" layoutX="14.0" layoutY="130.0" />
+   </children>
+</AnchorPane>
